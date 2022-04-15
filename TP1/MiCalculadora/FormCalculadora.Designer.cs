@@ -109,7 +109,6 @@ namespace MiCalculadora
             this.cmbOperador.Name = "cmbOperador";
             this.cmbOperador.Size = new System.Drawing.Size(93, 23);
             this.cmbOperador.TabIndex = 2;
-            this.cmbOperador.SelectedIndexChanged += new System.EventHandler(this.cmbOperador_Click);
             // 
             // lstOperaciones
             // 

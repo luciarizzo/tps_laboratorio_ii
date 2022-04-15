@@ -22,6 +22,9 @@ namespace MiCalculadora
             Limpiar();
         }
 
+        /// <summary>
+        /// Limpia los TextBox, ComboBox, Label
+        /// </summary>
         private void Limpiar()
         {
             txtNumero1.Clear();
@@ -30,6 +33,11 @@ namespace MiCalculadora
             cmbOperador.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Presionando el boton se convierte el numero decimal a binario en caso de ser posible
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
             Operando numeroDecimal = new Operando();
@@ -39,32 +47,37 @@ namespace MiCalculadora
             }
         }
 
+        /// <summary>
+        /// Presionando el boton se convierte el numero binario a decimal en caso de ser posible
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
             Operando numeroBinario = new Operando();
             if (!(String.IsNullOrWhiteSpace(lblResultado.Text)))
             {
                 lblResultado.Text = numeroBinario.BinarioDecimal(lblResultado.Text);
-
             }
         }
 
+        /// <summary>
+        /// Presionando el boton se cierra la ventana
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void cmbOperador_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
+        /// <summary>
+        /// Realiza la operacion correspondiente de los numeros por parametro
+        /// </summary>
+        /// <param name="numero1"></param>
+        /// <param name="numero2"></param>
+        /// <param name="operador"></param>
+        /// <returns></returns>
         public static double Operar(string numero1, string numero2, string operador)
         {
             Operando operando1 = new Operando(numero1);
@@ -77,6 +90,11 @@ namespace MiCalculadora
             return Calculadora.Operar(operando1, operando2, operadorElegido);
         }
 
+        /// <summary>
+        /// Presionando se realiza la operacion segun los numeros ingresados y operacion elegida
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOperar_Click(object sender, EventArgs e)
         {
             double resultado;
@@ -99,6 +117,11 @@ namespace MiCalculadora
             lblResultado.Text = resultado.ToString();
         }
 
+        /// <summary>
+        /// Permite mostrar el mensaje de confirmacion para salir de la ventana
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormCalculadora_FormClosing(Object sender, FormClosingEventArgs e)
         {
 
@@ -110,6 +133,11 @@ namespace MiCalculadora
             }
         }
 
+        /// <summary>
+        /// Presionandolo borra los datos de TextBox, ComboBox y Label de la pantalla
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();

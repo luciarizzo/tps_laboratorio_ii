@@ -32,7 +32,11 @@ namespace Entidades
                 }
             }
         }
-
+        /// <summary>
+        /// Valida que el valor recibido sea numerico
+        /// </summary>
+        /// <param name="strNumero"></param>
+        /// <returns>Devuelve el operando en caso de poder convertirlo a double, caso contrario devuelve 0</returns>
         private double ValidarOperando(string strNumero)
         {
             double retorno = 0;
@@ -43,6 +47,11 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// Validara que la cadena de caractees este compuesta solamente por caracteres 0 o 1
+        /// </summary>
+        /// <param name="numero"></param>
+        /// <returns>Retorna true en caso de que sea binario, false en caso de que no lo sea</returns>
         private bool EsBinario(string numero) ///FUNCIONA OK!!!
         {
             bool retorno = false;
@@ -59,6 +68,11 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// Convierte el numero binario a decimal en caso de ser posible.
+        /// </summary>
+        /// <param name="binario"></param>
+        /// <returns>Retorna el numero decimal si pudo convertir, caso contrario retorna "Valor invalido"</returns>
         public string BinarioDecimal(string binario) ///FUNCIONA OK!!
         {
             char[] array;
@@ -91,7 +105,11 @@ namespace Entidades
             }
             return "Valor invalido";
         }
-
+        /// <summary>
+        /// Convierte el numero decimal a binario en caso de ser posible.
+        /// </summary>
+        /// <param name="numero"></param>
+        /// <returns>Retorna el numero binario si pudo convertir, caso contrario retorna "Valor invalido"</returns>
         public string DecimalBinario(double numero) /// FUNCIONA OK!!!!!
         {
             string numeroFormandose = "";
@@ -124,6 +142,11 @@ namespace Entidades
             return "Valor invalido";
         }
 
+        /// <summary>
+        /// Convierte el numero decimal a binario en caso de ser posible.
+        /// </summary>
+        /// <param name="strNumero"></param>
+        /// <returns>Retorna el numero binario si pudo convertir, caso contrario retorna "Valor invalido"</returns>
         public string DecimalBinario(string strNumero)
         {
             double numeroDecimal;
@@ -133,22 +156,45 @@ namespace Entidades
             }
             return "Valor invalido";
         }
-
+        /// <summary>
+        /// Realiza la resta entre dos operando
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns>Retorna el resultado de la resta</returns>
         public static double operator-(Operando n1, Operando n2)
         {
             return n1.numero - n2.numero;
         }
 
+        /// <summary>
+        /// Realiza la suma entre dos operandos
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns>Retorna el resultado de la suma</returns>
         public static double operator +(Operando n1, Operando n2)
         {
             return n1.numero + n2.numero;
         }
 
+        /// <summary>
+        /// Realiza la multiplicacion entre dos operandos
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns>Retorna el resultado de la multiplicacion</returns>
         public static double operator *(Operando n1, Operando n2)
         {
             return n1.numero * n2.numero;
         }
 
+        /// <summary>
+        /// Realiza la division entre dos operandos
+        /// </summary>
+        /// <param name="n1"></param>
+        /// <param name="n2"></param>
+        /// <returns>Retorna el resultado de la division. Si el segundo operando es igual a cero, retorna la constante double.MinValue</returns>
         public static double operator /(Operando n1, Operando n2)
         {
             if (n2.numero == 0)
