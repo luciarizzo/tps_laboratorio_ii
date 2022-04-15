@@ -28,7 +28,7 @@ namespace Entidades
                 double numeroValidado = ValidarOperando(value);
                 if (numeroValidado != 0)
                 {
-                    this.numero = numeroValidado;
+                    numero = numeroValidado;
                 }
             }
         }
@@ -66,7 +66,7 @@ namespace Entidades
             double sumaPotencias = 0;
             array = binario.ToCharArray();
             double potencia;
-            if (EsBinario(binario))
+            if (!(String.IsNullOrWhiteSpace(binario)) && EsBinario(binario))
             {
                 int posiciones = tamanio - 1;
 
@@ -151,6 +151,10 @@ namespace Entidades
 
         public static double operator /(Operando n1, Operando n2)
         {
+            if (n2.numero == 0)
+            {
+                return double.MinValue;
+            }
             return n1.numero / n2.numero;
         }
 
