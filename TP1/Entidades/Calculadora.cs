@@ -21,7 +21,7 @@ namespace Entidades
                     resultado = num1 - num2;
                     break;
                 case '*':
-                    resultado = num1 - num2;
+                    resultado = num1 * num2;
                     break;
                 case '/':
                     resultado = num1 / num2;

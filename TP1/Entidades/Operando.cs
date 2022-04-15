@@ -89,7 +89,7 @@ namespace Entidades
                     }
                 return sumaPotencias.ToString();
             }
-            return "Valor Invalido";
+            return "Valor invalido";
         }
 
         public string DecimalBinario(double numero) /// FUNCIONA OK!!!!!
@@ -120,6 +120,16 @@ namespace Entidades
                 } while (decimalActualizado > 1);
 
                 return numeroFormandose;
+            }
+            return "Valor invalido";
+        }
+
+        public string DecimalBinario(string strNumero)
+        {
+            double numeroDecimal;
+            if(!(String.IsNullOrEmpty(strNumero)) && double.TryParse(strNumero, out numeroDecimal))
+            {
+                return DecimalBinario(numeroDecimal);
             }
             return "Valor invalido";
         }
