@@ -76,16 +76,5 @@ namespace Entidades
         {
             return !(v1 == v2);
         }
-
-        //public override bool Equals(object obj)
-        //{
-        //    Vehiculo v2 = obj as Vehiculo;
-        //    return v2 != null && this == v2;
-        //}
-
-        //public override int GetHashCode()
-        //{
-        //    return base.GetHashCode();
-        //}
     }
 }
