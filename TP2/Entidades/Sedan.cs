@@ -41,6 +41,11 @@ namespace Entidades
             }
         }
 
+
+        /// <summary>
+        /// Publica todos los datos del Sedan incluyendo tamanio y tipo
+        /// </summary>
+        /// <returns></returns>
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();

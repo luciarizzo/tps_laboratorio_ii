@@ -23,6 +23,10 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Publica todos los datos del SUV incluyendo tamanio.
+        /// </summary>
+        /// <returns></returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();

@@ -22,7 +22,10 @@ namespace Entidades
                 return Vehiculo.ETamanio.Chico;
             }
         }
-
+        /// <summary>
+        /// Publica todos los datos del Ciclomotor incluyendo tamanio
+        /// </summary>
+        /// <returns></returns>
         public override string Mostrar()
         {
             StringBuilder sb = new StringBuilder();
