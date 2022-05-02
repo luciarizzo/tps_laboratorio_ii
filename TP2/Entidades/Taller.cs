@@ -55,6 +55,7 @@ namespace Entidades
 
             sb.AppendFormat("Tenemos {0} lugares ocupados de un total de {1} disponibles", taller.vehiculos.Count, taller.espacioDisponible);
             sb.AppendLine("");
+
             foreach (Vehiculo v in taller.vehiculos)
             {
                 switch (tipo)
@@ -72,7 +73,7 @@ namespace Entidades
                         }
                         break;
                     case ETipo.SUV:
-                        if(v is Suv)
+                        if(v is Suv) 
                         {
                             sb.AppendLine(v.Mostrar());
                         }

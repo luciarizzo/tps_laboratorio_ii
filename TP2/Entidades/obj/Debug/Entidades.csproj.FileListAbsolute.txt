@@ -17,3 +17,9 @@ C:\Users\rizzo\OneDrive\Escritorio\TP-02-Cascara.r2\TP-02\Entidades\obj\Debug\En
 C:\Users\rizzo\OneDrive\Escritorio\TP-02-Cascara.r2\TP-02\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\rizzo\OneDrive\Escritorio\TP-02-Cascara.r2\TP-02\Entidades\obj\Debug\Entidades.dll
 C:\Users\rizzo\OneDrive\Escritorio\TP-02-Cascara.r2\TP-02\Entidades\obj\Debug\Entidades.pdb
+C:\Users\rizzo\projects\tps_laboratorio_ii\TP2\Entidades\bin\Debug\Entidades.dll
+C:\Users\rizzo\projects\tps_laboratorio_ii\TP2\Entidades\bin\Debug\Entidades.pdb
+C:\Users\rizzo\projects\tps_laboratorio_ii\TP2\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\rizzo\projects\tps_laboratorio_ii\TP2\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\rizzo\projects\tps_laboratorio_ii\TP2\Entidades\obj\Debug\Entidades.dll
+C:\Users\rizzo\projects\tps_laboratorio_ii\TP2\Entidades\obj\Debug\Entidades.pdb

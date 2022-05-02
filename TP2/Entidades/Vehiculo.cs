@@ -43,6 +43,7 @@ namespace Entidades
         {
             return (string)this;
         }
+
         /// <summary>
         /// Sobrecarga de string para crear string builder con informacion del Vehiculo
         /// </summary>

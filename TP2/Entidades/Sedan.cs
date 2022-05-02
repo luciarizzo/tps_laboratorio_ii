@@ -11,7 +11,7 @@ namespace Entidades
     public class Sedan : Vehiculo
     {
         public enum ETipo { CuatroPuertas, CincoPuertas }
-        ETipo tipo;
+        private ETipo tipo;
 
         /// <summary>
         /// Por defecto, TIPO será CuatroPuertas
@@ -51,7 +51,7 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("SEDAN");
-            sb.Append((string)this);
+            sb.AppendLine(base.Mostrar());
             sb.AppendFormat("TAMAÑO : {0}", this.Tamanio);
             sb.AppendLine(string.Format("TIPO : {0}", this.tipo));
             sb.AppendLine("");
