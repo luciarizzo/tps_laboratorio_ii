@@ -41,7 +41,6 @@ namespace Entidades
             }
         }
 
-
         /// <summary>
         /// Publica todos los datos del Sedan incluyendo tamanio y tipo
         /// </summary>
@@ -52,10 +51,8 @@ namespace Entidades
 
             sb.AppendLine("SEDAN");
             sb.AppendLine(base.Mostrar());
-            sb.AppendFormat("TAMAÑO : {0}", this.Tamanio);
-            sb.AppendLine(string.Format("TIPO : {0}", this.tipo));
-            sb.AppendLine("");
-            sb.AppendLine("---------------------");
+            sb.AppendFormat("TIPO : {0}\n", this.tipo.ToString());
+            sb.AppendLine("---------------------\n");
 
             return sb.ToString();
         }
